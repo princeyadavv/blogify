@@ -17,8 +17,15 @@
         }
     }
 
-    /* Mobile: 1 item per row */
+    /* Mobile: 2 items per row */
     @media (max-width: 576px) {
+        .card-responsive {
+            flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+        }
+    }
+
+    /* Extra small screens: 1 item per row */
+    @media (max-width: 400px) {
         .card-responsive {
             flex: 1 1 calc(100% - 1rem); /* 1 item per row */
         }
