@@ -3,6 +3,28 @@
 <head>
     <%- include('./partials/head') %>
     <title>Homepage</title>
+style>
+    /* Default: 4 items per row */
+    .card-responsive {
+        flex: 1 1 calc(25% - 1rem); /* 4 items per row */
+        margin: 0.5rem;
+    }
+
+    /* Tablet: 2 items per row */
+    @media (max-width: 992px) {
+        .card-responsive {
+            flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+        }
+    }
+
+    /* Mobile: 1 item per row */
+    @media (max-width: 576px) {
+        .card-responsive {
+            flex: 1 1 calc(100% - 1rem); /* 1 item per row */
+        }
+    }
+</style>
+
 </head>
 <body>
     
