@@ -15,7 +15,7 @@ const { checkForAuthCookie } = require('./middlewares/authentication')
 //configs
 const app = express()
 const PORT = process.env.PORT 
-mongoose.connect(process.env.MONGO_URL).then(()=> console.log('mongo connected')).catch(err=> console.log(err))
+mongoose.connect(process.env.MONGO_URI).then(()=> console.log('mongo connected')).catch(err=> console.log(err))
 
 
 //Middlewares
