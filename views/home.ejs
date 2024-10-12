@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('./partials/head') %>
     <title>Homepage</title>
+
 </head>
 <body>
     
@@ -10,17 +11,29 @@
     
     <%- include('./partials/nav') %>
 
-    <div class="container mt-3 ml-3 d-flex flex-wrap justify-content-start">
+   <div class="container mt-3 ml-3">
+    <div class="row">
         <% blogs.forEach(blog => { %>
-            <div class="card m-2" style="width: calc(25% - 1rem);">
-                <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><%= blog.title %></h5>
-                    <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read</a>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="<%= blog.coverImageUrl %>" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate" style="max-width: 100%;"><%= blog.title %></h5>
+                        <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read</a>
+                    </div>
                 </div>
             </div>
         <% }) %>
     </div>
+</div>
+
+<style>
+    .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
     
     <%- include('./partials/scripts') %>
    
