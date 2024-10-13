@@ -23,7 +23,7 @@
         <% if (locals.user) { %>
             <form action="/blog/comment/<%= blog._id %>" method="post">
                 <div class="mb-3">
-                  <input type="text" placeholder="Enter your Comment" class="form-control" id="content" name="content">
+                  <input type="text" required placeholder="Enter your Comment" class="form-control" id="content" name="content">
                 </div>
                 <button type="submit" class="btn btn-primary">Post</button>
               </form>

@@ -13,19 +13,19 @@
     <form method="post" action="/blog/" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" name="title" id="title" aria-describedby="title">
+            <input type="text" minlength="4" class="form-control" name="title" id="title" aria-describedby="title">
 
 
         </div>
         <div class="mb-3">
             <label for="coverImage" class="form-label">Cover Image</label>
-            <input type="file"  class="form-control" name="coverImage" id="coverImage" aria-describedby="coverImage">
+            <input type="file" required class="form-control" name="coverImage" id="coverImage" aria-describedby="coverImage">
 
 
         </div>
         <div class="mb-3">
             <label for="body" class="form-label">Body</label>
-            <textarea name="body" class="form-control" placeholder="Write Something here" id="floatingTextarea"></textarea>
+            <textarea name="body" minlength="800" class="form-control" placeholder="Write Something here" id="floatingTextarea"></textarea>
         </div>
         <div class="mb-3">
             <button class="btn btn-primary" type="submit">Save</button>
